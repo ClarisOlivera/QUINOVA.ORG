@@ -395,12 +395,10 @@
     </nav>
 
     <main id="der">
-      <a href="materia.php">
       <div class="materia">
         <div class="superior"><strong>6°B - FÍSICA</strong><br>Secundaria<br>Nombre</div>
         <div class="inferior"></div>
       </div>
-      </a>
       <div class="materia">
         <div class="superior"><strong>6° SECUNDARIA</strong><br>Secundaria<br>Wendy Puebla Infante</div>
         <div class="inferior"></div>
@@ -431,6 +429,5 @@
       </div>
     </main>
   </section>
-
 </body>
 </html>
