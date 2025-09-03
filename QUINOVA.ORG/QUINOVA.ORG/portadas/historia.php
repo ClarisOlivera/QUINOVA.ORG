@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+:root { --footer-height: 120px; }
+footer,
+.footer,
+#footer,
+.site-footer,
+.main-footer {
+  position: relative;   
+  z-index: 9999;           
+}
+
+/* Evitar que los bloques creen un stacking context más alto */
+#bloque2, #bloque3, #bloque4, #bloque5, #bloque6 {
+  position: relative;
+  z-index: 1;              /* mucho más bajo que el footer */
+  will-change: transform;
+}
+
+/* Mantener hover sin elevar z-index (no deben tapar el footer) */
+#bloque2:hover, #bloque3:hover, #bloque4:hover, #bloque5:hover, #bloque6:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+main {
+  /* Añade suficiente padding-bottom si tu footer es fixed */
+  padding-bottom: calc(var(--footer-height) + 20px);
+}
+
    body{
     background-color: antiquewhite;
     font-family: 'Georgia', serif;
@@ -114,6 +143,7 @@
             max-width: 98%;
             flex-wrap: wrap;
             text-align: center;
+            
         }
         #img2, #img3, #img4, #img5, #img6 {
             width: 90%;
@@ -144,6 +174,27 @@
             font-size: 14px;
         }
     }
+header,
+.cabecera,
+#cabecera,
+.site-header,
+.main-header {
+
+  position: relative;
+  z-index: 9999;
+}
+
+#bloque2, #bloque3, #bloque4, #bloque5, #bloque6 {
+  position: relative; 
+  z-index: 1;     
+  will-change: transform; 
+}
+#bloque2:hover, #bloque3:hover, #bloque4:hover, #bloque5:hover, #bloque6:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  z-index: 1; 
+}
+
     </style>
 </head>
 <?php include('../include/cabecera.php'); ?> 
