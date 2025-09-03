@@ -1,0 +1,42 @@
+-- Crear base de datos
+CREATE DATABASE IF NOT EXISTS segundosprint;
+USE segundosprint;
+
+-- Tabla: informacion
+CREATE TABLE informacion (
+    
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    direccion VARCHAR(255),
+    fechadenacimiento DATE,
+    telefono VARCHAR(20),
+    curso VARCHAR(50),
+    ci VARCHAR(20) PRIMARY KEY,
+    rude VARCHAR(50)
+);
+
+-- Tabla: cuenta
+CREATE TABLE cuenta (
+    user VARCHAR(20) NOT NULL PRIMARY KEY,
+    rol ENUM('estudiante', 'profesor', 'admin') NOT NULL,
+    contraseña VARCHAR(255) NOT NULL
+);
+
+-- Tabla: clases
+CREATE TABLE clases (
+    idclases INT AUTO_INCREMENT PRIMARY KEY,
+    codigo VARCHAR(50) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    cuenta_User VARCHAR(20) NOT NULL,
+    FOREIGN KEY (cuenta_User) REFERENCES cuenta(user)
+);
+
+-- Tabla: publicaciones
+CREATE TABLE publicaciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    idclases INT NOT NULL,
+    nombre VARCHAR(100),
+    codigo VARCHAR(50),
+    fechaC DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (idclases) REFERENCES clases(idclases)
+);
