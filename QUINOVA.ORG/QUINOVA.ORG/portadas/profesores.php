@@ -378,7 +378,7 @@
       <nav id="botones">
         <a href="crear.php" id="crear">Crear</a>
         <a href="unirse.php" id="unirse">Unirse</a>
-        <a href="cerrar.php" id="cerrar">Cerrar</a>
+        <a href="../portadas/cerrar.php" id="cerrar">Cerrar</a>
       </nav>
     </div>
   </header>

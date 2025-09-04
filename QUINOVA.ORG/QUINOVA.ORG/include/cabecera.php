@@ -6,13 +6,16 @@
     <title>Document</title>
     <style>
          #superior {
-            display: flex;
-            background-color: rgb(40, 40, 100);
-            height: 20%;
-            position: fixed;
-            top: 0;
-            width: 100%;
-          
+           display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    background-color: rgb(40, 40, 100);
+    height: auto; /* Permite que el header crezca si es necesario */
+    min-height: 120px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center; /* Centra verticalmente */
+    z-index: 1000;
         }
       
         #logo {

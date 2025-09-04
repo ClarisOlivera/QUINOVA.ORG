@@ -7,20 +7,23 @@
 <style>
   /* Estilos del header fijo */
   #superior {
-    display: flex;
+      display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
     background-color: rgb(40, 40, 100);
-    height: 200px; /* Ajusta según tus elementos */
+    height: auto; /* Permite que el header crezca si es necesario */
+    min-height: 120px;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Asegura que esté siempre visible */
+    align-items: center; /* Centra verticalmente */
+    z-index: 1000;
   }
 
   /* Empuja el contenido hacia abajo evitando que se superponga */
   body {
     background-color: bisque;
     margin: 0;
-    padding-top: 200px; /* Debe coincidir con la altura del header */
+    padding-top: 200px; 
     display: flex;
     flex-direction: column;
   }
@@ -74,7 +77,7 @@
     align-items: center;
     justify-content: space-between;
     margin-left: 90px;
-    margin-top: 200px;
+    margin-top: 100px;
     width: 70%;
     animation: deslizar 3s ease-out forwards;
   }
@@ -90,18 +93,22 @@
     animation: deslizar 3s ease-out forwards;
   }
   .caja-derecha {
-    width: 450px;
-    height: 450px;
-    background-color: rgb(40, 40, 100);
-    border-radius: 12px;
-    animation: aparecer 2s ease-in-out forwards;
-    opacity: 0;
-  }
-  .caja-derecha img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-  }
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada */
+  background-color: rgb(40, 40, 100);
+  border-radius: 12px;
+  animation: aparecer 2s ease-in-out forwards;
+  opacity: 0;
+  overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+.caja-derecha img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  border-radius: 12px;
+}
   #asunte {
     margin: 40px auto;
     padding: 20px;
@@ -206,7 +213,7 @@
         <a href="historia.php">historia</a>
         <a href="ambientes.php">ambientes</a>
         <a href="contacto.php">Contacto</a>
-        <a href="primerform.php">Inicia Sesión</a>
+        <a href="../portadas/primerform.php">Inicia Sesión</a>
       </nav>
     </div>
   </header>
