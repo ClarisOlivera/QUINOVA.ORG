@@ -39,7 +39,7 @@
             margin-top: 50px;
         }
 
-        body {
+        .body {
             background-color: bisque;
             margin: 0;
             padding: 0;
@@ -110,7 +110,7 @@
     </style>
 </head>
 
-<body>
+<body class="body">
      <header>
       <div id="superior">
               <img src="../imagenescol/logo.jpeg" alt="logo" id="logo">

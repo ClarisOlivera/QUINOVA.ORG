@@ -128,6 +128,7 @@
     .nivel-img {
       background-color: darkblue;
       border: 2px solid black;
+      
     }
 
     .nivel-img img {

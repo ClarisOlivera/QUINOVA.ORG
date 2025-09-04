@@ -318,52 +318,7 @@
         margin: 0 1px;
       }
     }
-    @media (max-width: 400px) {
-      header {
-        height: 60px;
-        font-size: 9px;
-      }
-      header h1 {
-        font-size: 6vw;
-      }
-      #logo {
-        height: 26px;
-        width: 26px;
-        top: 2px;
-        left: 2px;
-      }
-      #mas {
-        top: 2px;
-        right: 2px;
-      }
-      #mas img {
-        width: 14px;
-        height: 14px;
-      }
-      #botones {
-        top: 0px;
-        right: 2px;
-        padding: 2px;
-      }
-      #der {
-        padding: 2px;
-        grid-template-columns: 1fr;
-        grid-gap: 4px;
-      }
-      .materia, .clase {
-        font-size: 0.8rem;
-      }
-      .materia .superior, .clase .superior {
-        padding: 5px;
-      }
-      #izq {
-        padding: 2px 1px 2px 1px;
-      }
-      #izq a {
-        font-size: 0.5rem;
-        padding: 2px 1px;
-      }
-    }
+    
   </style>
 </head>
 <body>

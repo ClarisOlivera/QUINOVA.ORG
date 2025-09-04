@@ -26,7 +26,7 @@ main {
   padding-bottom: calc(var(--footer-height) + 20px);
 }
 
-   body{
+   .bodyy{
     background-color: antiquewhite;
     font-family: 'Georgia', serif;
     line-height: 1.6;
@@ -166,7 +166,7 @@ main {
             font-size: 14px;
         }
     }
-header,
+.header,
 .cabecera,
 #cabecera,
 .site-header,
@@ -189,8 +189,9 @@ header,
 
     </style>
 </head>
-<?php include('../include/cabecera.php'); ?> 
-<body>
+
+<body class="bodyy">
+    <?php include('../include/cabecera.php'); ?> 
 <main>
     <img src="../imagenescol/portada1.jpg" alt="" id="img1" >
     <div id="titulo-resena">Reseña Histórica</div>

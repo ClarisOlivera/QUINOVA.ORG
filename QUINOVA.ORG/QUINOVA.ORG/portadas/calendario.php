@@ -53,7 +53,7 @@
         
         #contenedor{
             background-color: blue;
-            display: flex;
+            display: flex;                                                                                              
             
 
         }
