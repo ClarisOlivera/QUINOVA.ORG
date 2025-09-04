@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+/* Sirve para que las animaciones no afecten a la cabecera ni al foooter */
+:root { --footer-height: 120px; }
+footer,
+.footer,
+#footer,
+.site-footer,
+.main-footer {
+  position: relative;   
+  z-index: 9999;           
+}
 
 /* Evitar que los bloques creen un stacking context más alto */
 #bloque2, #bloque3, #bloque4, #bloque5, #bloque6 {
